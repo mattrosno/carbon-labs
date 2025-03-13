@@ -5,6 +5,22 @@ import { GlobalTheme } from '@carbon/react/es/components/Theme';
 import { Layout } from '@carbon/react/es/components/Layout';
 import { TextDirection } from '@carbon/react/es/components/Text';
 import './styles.scss';
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  P,
+  OL,
+  UL,
+  LI,
+  Link,
+  Blockquote,
+  PageTable,
+  Code,
+} from '../../mdx-components/src/main/index.ts';
 
 import theme from './theme';
 
@@ -126,6 +142,22 @@ export const parameters = {
     current: 'light',
   },
   docs: {
+    components: {
+      h1: H1,
+      h2: H2,
+      h3: H3,
+      h4: H4,
+      h5: H5,
+      h6: H6,
+      p: P,
+      blockquote: Blockquote,
+      table: PageTable,
+      pre: Code,
+      ul: UL,
+      ol: OL,
+      li: LI,
+      a: Link,
+    },
     theme,
   },
   // Small (<672)

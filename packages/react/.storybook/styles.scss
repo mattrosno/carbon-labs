@@ -1,6 +1,8 @@
 @use '@carbon/styles' as styles with (
   $font-path: '~@ibm/plex'
 );
+@use '@carbon/styles/scss/breakpoint' as breakpoint;
+@use '../../mdx-components/src/main/index.scss';
 
 :root {
   @include styles.theme(styles.$white);
@@ -25,4 +27,20 @@ body {
 
 .sb-show-main.sb-main-padded {
   padding: 0;
+}
+
+img {
+  background: #ffffff;
+  max-inline-size: 100%;
+}
+
+.sbdocs.sbdocs-wrapper {
+  padding: 0;
+}
+
+.sbdocs.sbdocs-content {
+  max-inline-size: none;
+  @include breakpoint.breakpoint(lg) {
+    --cds-grid-columns: 12;
+  }
 }
